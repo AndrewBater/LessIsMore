@@ -1,0 +1,15 @@
+﻿@using Less.Models
+@model List<ChallengeModel>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of challenges</h2>
+
+@foreach (ChallengeModel challenge in Model)
+{
+    <div style="border-bottom: 1px dotted rgba(0,0,0,0.1)">
+        <h3>@challenge.Title</h3>
+        <div>@challenge.Description</div>
+    </div>
+}
